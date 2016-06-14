@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name = 'ActivityKit'
-  s.version = '1.0.0'
+  s.version = '1.0.1'
   s.summary = 'Custom application activities for iOS.'
   s.homepage = 'https://github.com/ccrazy88/activity-kit'
   s.author = { 'Chrisna Aing' => 'chrisna@udacity.com' }
