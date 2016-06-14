@@ -11,61 +11,12 @@ import UIKit
 // Source/Inspiration:
 // https://github.com/marcoarment/FCUtilities/blob/master/FCUtilities/FCOpenInSafariActivity.m
 
-private struct OpenInSafariActivityImageConstants {
-
-    let length: CGFloat
-    let halfLength: CGFloat
-    let triangleTipToCircleGap: CGFloat
-    let triangleBaseHalfLength: CGFloat
-    let tickMarkToCircleGap: CGFloat
-    let tickMarkLengthLong: CGFloat
-    let tickMarkLengthShort: CGFloat
-    let tickMarkWidth: CGFloat
-    let tickMarkHalfWidth: CGFloat
-    let tickLineCount = 72
-
-    var gradient: CGGradient? {
-        let baseSpace = CGColorSpaceCreateDeviceRGB()
-        let components: [CGFloat] = [ 0.0, 0.0, 0.0, 0.25,
-                                      0.0, 0.0, 0.0, 0.5 ]
-        let gradient = CGGradient(
-            colorComponentsSpace: baseSpace,
-            components: components,
-            locations: nil,
-            count: 2
-        )
-        return gradient
-    }
-
-    init(sideLength length: CGFloat, scale: CGFloat) {
-        self.length = length
-
-        halfLength = length / 2.0
-        triangleTipToCircleGap = ceil(0.012 * length)
-        triangleBaseHalfLength = ceil(0.125 * length) / 2.0
-        tickMarkToCircleGap = ceil(0.0325 * length)
-        tickMarkLengthLong = ceil(0.08 * length)
-        tickMarkLengthShort = ceil(0.045 * length)
-        tickMarkWidth = 1.0 / scale
-        tickMarkHalfWidth = tickMarkWidth / 2.0
-    }
-
-    func angleForTickLineIndex(index: Int) -> CGFloat {
-        return 2.0 * .pi * CGFloat(index) / CGFloat(tickLineCount)
-    }
-
-    func lengthForTickLineIndex(index: Int) -> CGFloat {
-        return index % 2 == 1 ? tickMarkLengthShort : tickMarkLengthLong
-    }
-
-}
-
 extension UIImage {
 
     private static func drawOpenInSafariGradient(
         context: CGContext,
         rectangle: CGRect,
-        constants: OpenInSafariActivityImageConstants
+        constants: OpenInSafariActivityConstants
     ) {
         context.saveGState()
         defer { context.restoreGState() }
@@ -87,7 +38,7 @@ extension UIImage {
 
     private static func drawOpenInSafariTickLines(
         context: CGContext,
-        constants: OpenInSafariActivityImageConstants
+        constants: OpenInSafariActivityConstants
     ) {
         let tickLineColor = UIColor(white: 0.0, alpha: 0.5)
         tickLineColor.setStroke()
@@ -120,7 +71,7 @@ extension UIImage {
 
     private static func drawOpenInSafariTriangles(
         context: CGContext,
-        constants: OpenInSafariActivityImageConstants
+        constants: OpenInSafariActivityConstants
     ) {
         context.saveGState()
         defer { context.restoreGState() }
@@ -173,7 +124,7 @@ extension UIImage {
 
         let origin = CGPoint.zero
         let rectangle = CGRect(origin: origin, size: size)
-        let constants = OpenInSafariActivityImageConstants(sideLength: length, scale: scale)
+        let constants = OpenInSafariActivityConstants(sideLength: length, scale: scale)
 
         drawOpenInSafariGradient(context: context, rectangle: rectangle, constants: constants)
         drawOpenInSafariTickLines(context: context, constants: constants)
