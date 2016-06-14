@@ -13,11 +13,35 @@ import UIKit
 
 extension UIImage {
 
+    // MARK: - Activity Images
+
+    @objc(cka_openInSafariActivityImageForWidth:scale:)
+    static func openInSafariActivityImage(sideLength length: CGFloat, scale: CGFloat) -> UIImage? {
+        let size = CGSize(width: length, height: length)
+        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return nil
+        }
+
+        let origin = CGPoint.zero
+        let rectangle = CGRect(origin: origin, size: size)
+        let constants = OpenInSafariActivityConstants(sideLength: length, scale: scale)
+
+        drawOpenInSafariGradient(context: context, rectangle: rectangle, constants: constants)
+        drawOpenInSafariTickLines(context: context, constants: constants)
+        drawOpenInSafariTriangles(context: context, constants: constants)
+
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        return image
+    }
+
+    // MARK: - Helpers
+
     private static func drawOpenInSafariGradient(
         context: CGContext,
         rectangle: CGRect,
         constants: OpenInSafariActivityConstants
-    ) {
+        ) {
         context.saveGState()
         defer { context.restoreGState() }
 
@@ -39,7 +63,7 @@ extension UIImage {
     private static func drawOpenInSafariTickLines(
         context: CGContext,
         constants: OpenInSafariActivityConstants
-    ) {
+        ) {
         let tickLineColor = UIColor(white: 0.0, alpha: 0.5)
         tickLineColor.setStroke()
 
@@ -72,7 +96,7 @@ extension UIImage {
     private static func drawOpenInSafariTriangles(
         context: CGContext,
         constants: OpenInSafariActivityConstants
-    ) {
+        ) {
         context.saveGState()
         defer { context.restoreGState() }
 
@@ -112,26 +136,6 @@ extension UIImage {
         bottomTriangle.close()
         context.setBlendMode(.normal)
         bottomTriangle.fill()
-    }
-
-    @objc(cka_openInSafariActivityImageForWidth:scale:)
-    static func openInSafariActivityImage(sideLength length: CGFloat, scale: CGFloat) -> UIImage? {
-        let size = CGSize(width: length, height: length)
-        UIGraphicsBeginImageContextWithOptions(size, false, scale)
-        guard let context = UIGraphicsGetCurrentContext() else {
-            return nil
-        }
-
-        let origin = CGPoint.zero
-        let rectangle = CGRect(origin: origin, size: size)
-        let constants = OpenInSafariActivityConstants(sideLength: length, scale: scale)
-
-        drawOpenInSafariGradient(context: context, rectangle: rectangle, constants: constants)
-        drawOpenInSafariTickLines(context: context, constants: constants)
-        drawOpenInSafariTriangles(context: context, constants: constants)
-
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        return image
     }
 
 }
