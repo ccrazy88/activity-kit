@@ -10,6 +10,9 @@
 		996F54381D0FF237000F2DBB /* ActivityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996F542D1D0FF237000F2DBB /* ActivityKit.framework */; };
 		996F54531D0FF38B000F2DBB /* ActivityKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 996F544D1D0FF38B000F2DBB /* ActivityKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		996F54551D0FF416000F2DBB /* ActivityKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996F54501D0FF38B000F2DBB /* ActivityKitTests.swift */; };
+		996F54611D0FF51C000F2DBB /* UIActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996F54601D0FF51C000F2DBB /* UIActivity.swift */; };
+		996F54631D0FF543000F2DBB /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996F54621D0FF543000F2DBB /* UIImage.swift */; };
+		996F54651D0FFE0C000F2DBB /* OpenInSafariActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996F54641D0FFE0C000F2DBB /* OpenInSafariActivity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		996F544A1D0FF38B000F2DBB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		996F544D1D0FF38B000F2DBB /* ActivityKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityKit.h; sourceTree = "<group>"; };
 		996F54501D0FF38B000F2DBB /* ActivityKitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityKitTests.swift; sourceTree = "<group>"; };
+		996F54601D0FF51C000F2DBB /* UIActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIActivity.swift; sourceTree = "<group>"; };
+		996F54621D0FF543000F2DBB /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		996F54641D0FFE0C000F2DBB /* OpenInSafariActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenInSafariActivity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				996F544D1D0FF38B000F2DBB /* ActivityKit.h */,
+				996F545A1D0FF4FC000F2DBB /* Extensions */,
+				996F54581D0FF4FC000F2DBB /* Activities */,
 			);
 			path = ActivityKit;
 			sourceTree = "<group>";
@@ -116,6 +124,23 @@
 				996F54501D0FF38B000F2DBB /* ActivityKitTests.swift */,
 			);
 			path = ActivityKit;
+			sourceTree = "<group>";
+		};
+		996F54581D0FF4FC000F2DBB /* Activities */ = {
+			isa = PBXGroup;
+			children = (
+				996F54641D0FFE0C000F2DBB /* OpenInSafariActivity.swift */,
+			);
+			path = Activities;
+			sourceTree = "<group>";
+		};
+		996F545A1D0FF4FC000F2DBB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				996F54601D0FF51C000F2DBB /* UIActivity.swift */,
+				996F54621D0FF543000F2DBB /* UIImage.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +288,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				996F54631D0FF543000F2DBB /* UIImage.swift in Sources */,
+				996F54651D0FFE0C000F2DBB /* OpenInSafariActivity.swift in Sources */,
+				996F54611D0FF51C000F2DBB /* UIActivity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
