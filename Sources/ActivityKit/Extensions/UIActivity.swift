@@ -14,12 +14,14 @@ extension UIActivity {
     func lengthInPointsOfActivityImageFor(traitCollection: UITraitCollection) -> CGFloat {
         switch traitCollection.userInterfaceIdiom {
         case .phone:
-            return 60.0
+            // Full length is 60 points.
+            return 50.0
         case .pad:
-            return 76.0
+            // Full length is 76 points.
+            return 64.0
         case .carPlay, .TV, .unspecified:
-            // Doesn't make sense at this point, so let's just return 60.0.
-            return 60.0
+            // Doesn't make sense at this point, so return the same number as we do for phone.
+            return 50.0
         }
     }
 

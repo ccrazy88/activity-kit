@@ -25,7 +25,7 @@ public final class OpenInSafariActivity: UIActivity {
 
     override public func activityImage() -> UIImage? {
         let traitCollection = UIScreen.main().traitCollection
-        let sideLength = lengthInPointsOfActivityImageFor(traitCollection: traitCollection) - 10.0
+        let sideLength = lengthInPointsOfActivityImageFor(traitCollection: traitCollection)
         let screenScale = UIScreen.main().scale
         return UIImage.openInSafariActivityImage(sideLength: sideLength, scale: screenScale)
     }
