@@ -37,11 +37,9 @@ extension UIImage {
 
     // MARK: - Helpers
 
-    private static func drawOpenInSafariGradient(
-        context: CGContext,
-        rectangle: CGRect,
-        constants: OpenInSafariActivityConstants
-        ) {
+    private static func drawOpenInSafariGradient(context: CGContext,
+                                                 rectangle: CGRect,
+                                                 constants: OpenInSafariActivityConstants) {
         context.saveGState()
         defer { context.restoreGState() }
 
@@ -60,10 +58,8 @@ extension UIImage {
         )
     }
 
-    private static func drawOpenInSafariTickLines(
-        context: CGContext,
-        constants: OpenInSafariActivityConstants
-        ) {
+    private static func drawOpenInSafariTickLines(context: CGContext,
+                                                  constants: OpenInSafariActivityConstants) {
         let tickLineColor = UIColor(white: 0.0, alpha: 0.5)
         tickLineColor.setStroke()
 
@@ -93,10 +89,8 @@ extension UIImage {
         }
     }
 
-    private static func drawOpenInSafariTriangles(
-        context: CGContext,
-        constants: OpenInSafariActivityConstants
-        ) {
+    private static func drawOpenInSafariTriangles(context: CGContext,
+                                                  constants: OpenInSafariActivityConstants) {
         context.saveGState()
         defer { context.restoreGState() }
 
@@ -126,10 +120,8 @@ extension UIImage {
         topTriangle.fill()
 
         let bottomTriangle = UIBezierPath()
-        let bottomTriangleStart = CGPoint(
-            x: constants.halfLength,
-            y: constants.length - constants.triangleTipToCircleGap
-        )
+        let bottomTriangleStart = CGPoint(x: constants.halfLength,
+                                          y: constants.length - constants.triangleTipToCircleGap)
         bottomTriangle.move(to: bottomTriangleStart)
         bottomTriangle.addLine(to: triangleLeftBasePoint)
         bottomTriangle.addLine(to: triangleRightBasePoint)
