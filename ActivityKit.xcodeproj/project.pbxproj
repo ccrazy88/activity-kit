@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		996F54311D0FF237000F2DBB /* ActivityKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 996F54301D0FF237000F2DBB /* ActivityKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		996F54381D0FF237000F2DBB /* ActivityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996F542D1D0FF237000F2DBB /* ActivityKit.framework */; };
-		996F543D1D0FF237000F2DBB /* ActivityKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996F543C1D0FF237000F2DBB /* ActivityKitTests.swift */; };
+		996F54531D0FF38B000F2DBB /* ActivityKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 996F544D1D0FF38B000F2DBB /* ActivityKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		996F54551D0FF416000F2DBB /* ActivityKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996F54501D0FF38B000F2DBB /* ActivityKitTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,11 +24,11 @@
 
 /* Begin PBXFileReference section */
 		996F542D1D0FF237000F2DBB /* ActivityKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ActivityKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		996F54301D0FF237000F2DBB /* ActivityKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivityKit.h; sourceTree = "<group>"; };
-		996F54321D0FF237000F2DBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		996F54371D0FF237000F2DBB /* ActivityKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActivityKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		996F543C1D0FF237000F2DBB /* ActivityKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityKitTests.swift; sourceTree = "<group>"; };
-		996F543E1D0FF237000F2DBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		996F54371D0FF237000F2DBB /* ActivityKit-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ActivityKit-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		996F54481D0FF38B000F2DBB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		996F544A1D0FF38B000F2DBB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		996F544D1D0FF38B000F2DBB /* ActivityKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityKit.h; sourceTree = "<group>"; };
+		996F54501D0FF38B000F2DBB /* ActivityKitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityKitTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +53,10 @@
 		996F54231D0FF237000F2DBB = {
 			isa = PBXGroup;
 			children = (
-				996F542F1D0FF237000F2DBB /* ActivityKit */,
-				996F543B1D0FF237000F2DBB /* ActivityKitTests */,
+				996F544B1D0FF38B000F2DBB /* Sources */,
+				996F544E1D0FF38B000F2DBB /* Tests */,
+				996F54471D0FF38B000F2DBB /* ActivityKit-iOS */,
+				996F54491D0FF38B000F2DBB /* ActivityKit-iOSTests */,
 				996F542E1D0FF237000F2DBB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,27 +65,57 @@
 			isa = PBXGroup;
 			children = (
 				996F542D1D0FF237000F2DBB /* ActivityKit.framework */,
-				996F54371D0FF237000F2DBB /* ActivityKitTests.xctest */,
+				996F54371D0FF237000F2DBB /* ActivityKit-iOS Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		996F542F1D0FF237000F2DBB /* ActivityKit */ = {
+		996F54471D0FF38B000F2DBB /* ActivityKit-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				996F54301D0FF237000F2DBB /* ActivityKit.h */,
-				996F54321D0FF237000F2DBB /* Info.plist */,
+				996F54481D0FF38B000F2DBB /* Info.plist */,
+			);
+			path = "ActivityKit-iOS";
+			sourceTree = "<group>";
+		};
+		996F54491D0FF38B000F2DBB /* ActivityKit-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				996F544A1D0FF38B000F2DBB /* Info.plist */,
+			);
+			path = "ActivityKit-iOSTests";
+			sourceTree = "<group>";
+		};
+		996F544B1D0FF38B000F2DBB /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				996F544C1D0FF38B000F2DBB /* ActivityKit */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		996F544C1D0FF38B000F2DBB /* ActivityKit */ = {
+			isa = PBXGroup;
+			children = (
+				996F544D1D0FF38B000F2DBB /* ActivityKit.h */,
 			);
 			path = ActivityKit;
 			sourceTree = "<group>";
 		};
-		996F543B1D0FF237000F2DBB /* ActivityKitTests */ = {
+		996F544E1D0FF38B000F2DBB /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				996F543C1D0FF237000F2DBB /* ActivityKitTests.swift */,
-				996F543E1D0FF237000F2DBB /* Info.plist */,
+				996F544F1D0FF38B000F2DBB /* ActivityKit */,
 			);
-			path = ActivityKitTests;
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		996F544F1D0FF38B000F2DBB /* ActivityKit */ = {
+			isa = PBXGroup;
+			children = (
+				996F54501D0FF38B000F2DBB /* ActivityKitTests.swift */,
+			);
+			path = ActivityKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,34 +125,36 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				996F54311D0FF237000F2DBB /* ActivityKit.h in Headers */,
+				996F54531D0FF38B000F2DBB /* ActivityKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		996F542C1D0FF237000F2DBB /* ActivityKit */ = {
+		996F542C1D0FF237000F2DBB /* ActivityKit-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 996F54411D0FF237000F2DBB /* Build configuration list for PBXNativeTarget "ActivityKit" */;
+			buildConfigurationList = 996F54411D0FF237000F2DBB /* Build configuration list for PBXNativeTarget "ActivityKit-iOS" */;
 			buildPhases = (
 				996F54281D0FF237000F2DBB /* Sources */,
 				996F54291D0FF237000F2DBB /* Frameworks */,
 				996F542A1D0FF237000F2DBB /* Headers */,
 				996F542B1D0FF237000F2DBB /* Resources */,
+				996F54561D0FF46B000F2DBB /* ShellScript */,
+				996F54571D0FF46D000F2DBB /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ActivityKit;
+			name = "ActivityKit-iOS";
 			productName = ActivityKit;
 			productReference = 996F542D1D0FF237000F2DBB /* ActivityKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		996F54361D0FF237000F2DBB /* ActivityKitTests */ = {
+		996F54361D0FF237000F2DBB /* ActivityKit-iOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 996F54441D0FF237000F2DBB /* Build configuration list for PBXNativeTarget "ActivityKitTests" */;
+			buildConfigurationList = 996F54441D0FF237000F2DBB /* Build configuration list for PBXNativeTarget "ActivityKit-iOS Tests" */;
 			buildPhases = (
 				996F54331D0FF237000F2DBB /* Sources */,
 				996F54341D0FF237000F2DBB /* Frameworks */,
@@ -131,9 +165,9 @@
 			dependencies = (
 				996F543A1D0FF237000F2DBB /* PBXTargetDependency */,
 			);
-			name = ActivityKitTests;
+			name = "ActivityKit-iOS Tests";
 			productName = ActivityKitTests;
-			productReference = 996F54371D0FF237000F2DBB /* ActivityKitTests.xctest */;
+			productReference = 996F54371D0FF237000F2DBB /* ActivityKit-iOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -172,8 +206,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				996F542C1D0FF237000F2DBB /* ActivityKit */,
-				996F54361D0FF237000F2DBB /* ActivityKitTests */,
+				996F542C1D0FF237000F2DBB /* ActivityKit-iOS */,
+				996F54361D0FF237000F2DBB /* ActivityKit-iOS Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -195,6 +229,35 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		996F54561D0FF46B000F2DBB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"[warning] cannot run swiftlint because it isn't installed\"\nfi\n";
+		};
+		996F54571D0FF46D000F2DBB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# If we're using the Debug build configuration, suffix the build number with\n# the current branch name to make collisions far less likely across feature\n# branches.\n\nbuild_number=$(git rev-list HEAD --count)\n\nif [ \"$CONFIGURATION\" = \"Debug\" ]; then\n    branch_name=$(git rev-parse --abbrev-ref HEAD)\n    /usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $build_number-$branch_name\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n    /usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $build_number-$branch_name\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}.dSYM/Contents/Info.plist\"\nelse\n    /usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $build_number\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n    /usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $build_number\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}.dSYM/Contents/Info.plist\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		996F54281D0FF237000F2DBB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -207,7 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				996F543D1D0FF237000F2DBB /* ActivityKitTests.swift in Sources */,
+				996F54551D0FF416000F2DBB /* ActivityKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +279,7 @@
 /* Begin PBXTargetDependency section */
 		996F543A1D0FF237000F2DBB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 996F542C1D0FF237000F2DBB /* ActivityKit */;
+			target = 996F542C1D0FF237000F2DBB /* ActivityKit-iOS */;
 			targetProxy = 996F54391D0FF237000F2DBB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -244,7 +307,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -261,7 +324,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -306,7 +369,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -324,11 +387,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ActivityKit/Info.plist;
+				INFOPLIST_FILE = "ActivityKit-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.chrisna.ActivityKit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ActivityKit;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -341,11 +404,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ActivityKit/Info.plist;
+				INFOPLIST_FILE = "ActivityKit-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.chrisna.ActivityKit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ActivityKit;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -354,7 +417,7 @@
 		996F54451D0FF237000F2DBB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = ActivityKitTests/Info.plist;
+				INFOPLIST_FILE = "ActivityKit-iOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.chrisna.ActivityKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -365,7 +428,7 @@
 		996F54461D0FF237000F2DBB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = ActivityKitTests/Info.plist;
+				INFOPLIST_FILE = "ActivityKit-iOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.chrisna.ActivityKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -385,21 +448,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		996F54411D0FF237000F2DBB /* Build configuration list for PBXNativeTarget "ActivityKit" */ = {
+		996F54411D0FF237000F2DBB /* Build configuration list for PBXNativeTarget "ActivityKit-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				996F54421D0FF237000F2DBB /* Debug */,
 				996F54431D0FF237000F2DBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		996F54441D0FF237000F2DBB /* Build configuration list for PBXNativeTarget "ActivityKitTests" */ = {
+		996F54441D0FF237000F2DBB /* Build configuration list for PBXNativeTarget "ActivityKit-iOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				996F54451D0FF237000F2DBB /* Debug */,
 				996F54461D0FF237000F2DBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
