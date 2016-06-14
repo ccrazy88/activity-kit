@@ -51,7 +51,7 @@ private struct OpenInSafariActivityImageConstants {
     }
 
     func angleForTickLineIndex(index: Int) -> CGFloat {
-        return 2.0 * CGFloat(M_PI) * CGFloat(index) / CGFloat(tickLineCount)
+        return 2.0 * .pi * CGFloat(index) / CGFloat(tickLineCount)
     }
 
     func lengthForTickLineIndex(index: Int) -> CGFloat {
@@ -126,7 +126,7 @@ extension UIImage {
         defer { context.restoreGState() }
 
         context.translate(x: constants.halfLength, y: constants.halfLength)
-        context.rotate(byAngle: CGFloat(M_PI) + CGFloat(M_PI_4))
+        context.rotate(byAngle: .pi + .pi / 4.0)
         context.translate(x: -constants.halfLength, y: -constants.halfLength)
 
         let triangleColor = UIColor.black()
