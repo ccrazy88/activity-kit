@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.version = '1.0.2'
   s.summary = 'Custom application activities for iOS.'
   s.homepage = 'https://github.com/ccrazy88/activity-kit'
-  s.author = { 'Chrisna Aing' => 'chrisna@udacity.com' }
+  s.author = { 'Chrisna Aing' => 'chrisna@chrisna.org' }
   s.source = { :git => 'https://github.com/ccrazy88/activity-kit.git',
                :tag => s.version.to_s }
   s.license = { :type => 'MIT', :file => 'LICENSE' }
