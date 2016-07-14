@@ -19,7 +19,7 @@ extension UIActivity {
         case .pad:
             // Full length is 76 points.
             return 64.0
-        case .carPlay, .TV, .unspecified:
+        case .carPlay, .tv, .unspecified:
             // Doesn't make sense at this point, so return the same number as we do for phone.
             return 50.0
         }
