@@ -32,10 +32,12 @@ public final class OpenInSafariActivity: UIActivity {
 
     override public func canPerform(withActivityItems activityItems: [AnyObject]) -> Bool {
         for item in activityItems {
-            if let _ = item as? NSURL {
+            if let _ = item as? URL {
                 return true
-            } else if let string = item as? String, _ = NSURL(string: string) {
-                return true
+            } else if let
+                string = item as? String,
+                _ = URL(string: string) {
+                    return true
             }
         }
         return false
@@ -45,8 +47,10 @@ public final class OpenInSafariActivity: UIActivity {
         for item in activityItems {
             if let itemURL = item as? URL {
                 url = itemURL
-            } else if let string = item as? String, itemURL = URL(string: string) {
-                url = itemURL
+            } else if let
+                string = item as? String,
+                itemURL = URL(string: string) {
+                    url = itemURL
             }
         }
     }
