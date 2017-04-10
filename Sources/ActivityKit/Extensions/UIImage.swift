@@ -43,7 +43,7 @@ extension UIImage {
         context.saveGState()
         defer { context.restoreGState() }
 
-        context.addEllipse(inRect: rectangle)
+        context.addEllipse(in: rectangle)
         context.clip()
 
         guard let gradient = constants.gradient else {
@@ -63,14 +63,14 @@ extension UIImage {
         let tickLineColor = UIColor(white: 0.0, alpha: 0.5)
         tickLineColor.setStroke()
 
-        (0..<constants.tickLineCount).forEach { i in
+        (0..<constants.tickLineCount).forEach { index in
             context.saveGState()
             defer { context.restoreGState() }
 
             context.setBlendMode(.clear)
-            context.translate(x: constants.halfLength, y: constants.halfLength)
-            context.rotate(byAngle: constants.angleForTickLineIndex(index: i))
-            context.translate(x: -constants.halfLength, y: -constants.halfLength)
+            context.translateBy(x: constants.halfLength, y: constants.halfLength)
+            context.rotate(by: constants.angleForTickLineIndex(index: index))
+            context.translateBy(x: -constants.halfLength, y: -constants.halfLength)
 
             let tickLine = UIBezierPath()
             let tickLineStart = CGPoint(
@@ -79,7 +79,7 @@ extension UIImage {
             )
             let tickLineEnd = CGPoint(
                 x: constants.halfLength - constants.tickMarkHalfWidth,
-                y: constants.tickMarkToCircleGap + constants.lengthForTickLineIndex(index: i)
+                y: constants.tickMarkToCircleGap + constants.lengthForTickLineIndex(index: index)
             )
 
             tickLine.move(to: tickLineStart)
@@ -94,11 +94,11 @@ extension UIImage {
         context.saveGState()
         defer { context.restoreGState() }
 
-        context.translate(x: constants.halfLength, y: constants.halfLength)
-        context.rotate(byAngle: .pi + .pi / 4.0)
-        context.translate(x: -constants.halfLength, y: -constants.halfLength)
+        context.translateBy(x: constants.halfLength, y: constants.halfLength)
+        context.rotate(by: .pi + .pi / 4.0)
+        context.translateBy(x: -constants.halfLength, y: -constants.halfLength)
 
-        let triangleColor = UIColor.black()
+        let triangleColor = UIColor.black
         triangleColor.setFill()
 
         let triangleLeftBasePoint = CGPoint(

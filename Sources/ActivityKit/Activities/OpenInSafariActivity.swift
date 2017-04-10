@@ -14,43 +14,38 @@ public final class OpenInSafariActivity: UIActivity {
 
     private var url: URL?
 
-    override public func activityType() -> String? {
-        return UIActivityTypeCKAOpenInSafari
+    public override var activityType: UIActivityType? {
+        return UIActivityType(rawValue: UIActivityTypeCKAOpenInSafari)
     }
 
-    override public func activityTitle() -> String? {
-        let title = NSLocalizedString("Open in Safari", comment: "Open in Safari activity title")
-        return title
+    public override var activityTitle: String? {
+        return NSLocalizedString("Open in Safari", comment: "Open in Safari activity title")
     }
 
-    override public func activityImage() -> UIImage? {
-        let traitCollection = UIScreen.main().traitCollection
+    public override var activityImage: UIImage? {
+        let traitCollection = UIScreen.main.traitCollection
         let sideLength = lengthInPointsOfActivityImageFor(traitCollection: traitCollection)
-        let screenScale = UIScreen.main().scale
+        let screenScale = UIScreen.main.scale
         return UIImage.openInSafariActivityImage(sideLength: sideLength, scale: screenScale)
     }
 
-    override public func canPerform(withActivityItems activityItems: [AnyObject]) -> Bool {
+    override public func canPerform(withActivityItems activityItems: [Any]) -> Bool {
         for item in activityItems {
-            if let _ = item as? URL {
+            if (item as? URL) != nil {
                 return true
-            } else if let
-                string = item as? String,
-                _ = URL(string: string) {
-                    return true
+            } else if let string = item as? String, URL(string: string) != nil {
+                return true
             }
         }
         return false
     }
 
-    override public func prepare(withActivityItems activityItems: [AnyObject]) {
+    override public func prepare(withActivityItems activityItems: [Any]) {
         for item in activityItems {
             if let itemURL = item as? URL {
                 url = itemURL
-            } else if let
-                string = item as? String,
-                itemURL = URL(string: string) {
-                    url = itemURL
+            } else if let string = item as? String, let itemURL = URL(string: string) {
+                url = itemURL
             }
         }
     }
@@ -62,11 +57,11 @@ public final class OpenInSafariActivity: UIActivity {
         }
 
         if #available(iOS 10, *) {
-            UIApplication.shared().open(url, options: [:]) { success in
+            UIApplication.shared.open(url, options: [:]) { success in
                 self.activityDidFinish(success)
             }
         } else {
-            let didOpenURL = UIApplication.shared().openURL(url)
+            let didOpenURL = UIApplication.shared.openURL(url)
             activityDidFinish(didOpenURL)
         }
     }

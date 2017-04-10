@@ -26,8 +26,8 @@ struct OpenInSafariActivityConstants {
         let components: [CGFloat] = [ 0.0, 0.0, 0.0, 0.25,
                                       0.0, 0.0, 0.0, 0.5 ]
         let gradient = CGGradient(
-            colorComponentsSpace: baseSpace,
-            components: components,
+            colorSpace: baseSpace,
+            colorComponents: components,
             locations: nil,
             count: 2
         )
