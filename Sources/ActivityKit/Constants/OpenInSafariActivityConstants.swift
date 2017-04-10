@@ -9,7 +9,6 @@
 import Foundation
 
 struct OpenInSafariActivityConstants {
-
     let length: CGFloat
     let halfLength: CGFloat
     let triangleTipToCircleGap: CGFloat
@@ -23,8 +22,10 @@ struct OpenInSafariActivityConstants {
 
     var gradient: CGGradient? {
         let baseSpace = CGColorSpaceCreateDeviceRGB()
-        let components: [CGFloat] = [ 0.0, 0.0, 0.0, 0.25,
-                                      0.0, 0.0, 0.0, 0.5 ]
+        let components: [CGFloat] = [
+            0.0, 0.0, 0.0, 0.25,
+            0.0, 0.0, 0.0, 0.5
+        ]
         let gradient = CGGradient(
             colorSpace: baseSpace,
             colorComponents: components,
@@ -54,5 +55,4 @@ struct OpenInSafariActivityConstants {
     func lengthForTickLineIndex(index: Int) -> CGFloat {
         return index % 2 == 1 ? tickMarkLengthShort : tickMarkLengthLong
     }
-
 }

@@ -10,4 +10,4 @@ import XCTest
 
 @testable import ActivityKit
 
-final class ActivityKitTests: XCTestCase { }
+final class ActivityKitTests: XCTestCase {}

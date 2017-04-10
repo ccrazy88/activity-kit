@@ -12,7 +12,6 @@ import UIKit
 // https://github.com/marcoarment/FCUtilities/blob/master/FCUtilities/FCOpenInSafariActivity.m
 
 extension UIImage {
-
     // MARK: - Activity Images
 
     @objc(cka_openInSafariActivityImageForWidth:scale:)
@@ -63,7 +62,7 @@ extension UIImage {
         let tickLineColor = UIColor(white: 0.0, alpha: 0.5)
         tickLineColor.setStroke()
 
-        (0..<constants.tickLineCount).forEach { index in
+        (0 ..< constants.tickLineCount).forEach { index in
             context.saveGState()
             defer { context.restoreGState() }
 
@@ -129,5 +128,4 @@ extension UIImage {
         context.setBlendMode(.normal)
         bottomTriangle.fill()
     }
-
 }

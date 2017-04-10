@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		996F54381D0FF237000F2DBB /* ActivityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996F542D1D0FF237000F2DBB /* ActivityKit.framework */; };
 		996F54531D0FF38B000F2DBB /* ActivityKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 996F544D1D0FF38B000F2DBB /* ActivityKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		996F54551D0FF416000F2DBB /* ActivityKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996F54501D0FF38B000F2DBB /* ActivityKitTests.swift */; };
 		996F54611D0FF51C000F2DBB /* UIActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996F54601D0FF51C000F2DBB /* UIActivity.swift */; };
 		996F54631D0FF543000F2DBB /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996F54621D0FF543000F2DBB /* UIImage.swift */; };
 		996F54651D0FFE0C000F2DBB /* OpenInSafariActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996F54641D0FFE0C000F2DBB /* OpenInSafariActivity.swift */; };
 		996F54691D106E87000F2DBB /* OpenInSafariActivityConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996F54681D106E87000F2DBB /* OpenInSafariActivityConstants.swift */; };
+		999CA7F61E9B3E0000DEF5A8 /* ActivityKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999CA7F51E9B3E0000DEF5A8 /* ActivityKitTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,15 +28,15 @@
 
 /* Begin PBXFileReference section */
 		996F542D1D0FF237000F2DBB /* ActivityKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ActivityKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		996F54371D0FF237000F2DBB /* ActivityKit-iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ActivityKit-iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		996F54481D0FF38B000F2DBB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		996F544A1D0FF38B000F2DBB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		996F54371D0FF237000F2DBB /* ActivityKit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ActivityKit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		996F544D1D0FF38B000F2DBB /* ActivityKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityKit.h; sourceTree = "<group>"; };
-		996F54501D0FF38B000F2DBB /* ActivityKitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityKitTests.swift; sourceTree = "<group>"; };
 		996F54601D0FF51C000F2DBB /* UIActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIActivity.swift; sourceTree = "<group>"; };
 		996F54621D0FF543000F2DBB /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		996F54641D0FFE0C000F2DBB /* OpenInSafariActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenInSafariActivity.swift; sourceTree = "<group>"; };
 		996F54681D106E87000F2DBB /* OpenInSafariActivityConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenInSafariActivityConstants.swift; sourceTree = "<group>"; };
+		999CA7F51E9B3E0000DEF5A8 /* ActivityKitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityKitTests.swift; sourceTree = "<group>"; };
+		999CA7F71E9B3E1600DEF5A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		999CA7F81E9B3E4F00DEF5A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +63,6 @@
 			children = (
 				996F544B1D0FF38B000F2DBB /* Sources */,
 				996F544E1D0FF38B000F2DBB /* Tests */,
-				996F54471D0FF38B000F2DBB /* ActivityKit-iOS */,
-				996F54491D0FF38B000F2DBB /* ActivityKit-iOSTests */,
 				996F542E1D0FF237000F2DBB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,31 +71,16 @@
 			isa = PBXGroup;
 			children = (
 				996F542D1D0FF237000F2DBB /* ActivityKit.framework */,
-				996F54371D0FF237000F2DBB /* ActivityKit-iOS Tests.xctest */,
+				996F54371D0FF237000F2DBB /* ActivityKit Tests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		996F54471D0FF38B000F2DBB /* ActivityKit-iOS */ = {
-			isa = PBXGroup;
-			children = (
-				996F54481D0FF38B000F2DBB /* Info.plist */,
-			);
-			path = "ActivityKit-iOS";
-			sourceTree = "<group>";
-		};
-		996F54491D0FF38B000F2DBB /* ActivityKit-iOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				996F544A1D0FF38B000F2DBB /* Info.plist */,
-			);
-			path = "ActivityKit-iOSTests";
 			sourceTree = "<group>";
 		};
 		996F544B1D0FF38B000F2DBB /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				996F544C1D0FF38B000F2DBB /* ActivityKit */,
+				999CA7F81E9B3E4F00DEF5A8 /* Info.plist */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -116,17 +99,10 @@
 		996F544E1D0FF38B000F2DBB /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				996F544F1D0FF38B000F2DBB /* ActivityKit */,
+				999CA7F41E9B3E0000DEF5A8 /* ActivityKitTests */,
+				999CA7F71E9B3E1600DEF5A8 /* Info.plist */,
 			);
 			path = Tests;
-			sourceTree = "<group>";
-		};
-		996F544F1D0FF38B000F2DBB /* ActivityKit */ = {
-			isa = PBXGroup;
-			children = (
-				996F54501D0FF38B000F2DBB /* ActivityKitTests.swift */,
-			);
-			path = ActivityKit;
 			sourceTree = "<group>";
 		};
 		996F54581D0FF4FC000F2DBB /* Activities */ = {
@@ -154,6 +130,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		999CA7F41E9B3E0000DEF5A8 /* ActivityKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				999CA7F51E9B3E0000DEF5A8 /* ActivityKitTests.swift */,
+			);
+			path = ActivityKitTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -168,14 +152,15 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		996F542C1D0FF237000F2DBB /* ActivityKit-iOS */ = {
+		996F542C1D0FF237000F2DBB /* ActivityKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 996F54411D0FF237000F2DBB /* Build configuration list for PBXNativeTarget "ActivityKit-iOS" */;
+			buildConfigurationList = 996F54411D0FF237000F2DBB /* Build configuration list for PBXNativeTarget "ActivityKit" */;
 			buildPhases = (
 				996F54281D0FF237000F2DBB /* Sources */,
 				996F54291D0FF237000F2DBB /* Frameworks */,
 				996F542A1D0FF237000F2DBB /* Headers */,
 				996F542B1D0FF237000F2DBB /* Resources */,
+				999CA7F91E9B3EFA00DEF5A8 /* ShellScript */,
 				996F54561D0FF46B000F2DBB /* ShellScript */,
 				996F54571D0FF46D000F2DBB /* ShellScript */,
 			);
@@ -183,14 +168,14 @@
 			);
 			dependencies = (
 			);
-			name = "ActivityKit-iOS";
+			name = ActivityKit;
 			productName = ActivityKit;
 			productReference = 996F542D1D0FF237000F2DBB /* ActivityKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		996F54361D0FF237000F2DBB /* ActivityKit-iOS Tests */ = {
+		996F54361D0FF237000F2DBB /* ActivityKit Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 996F54441D0FF237000F2DBB /* Build configuration list for PBXNativeTarget "ActivityKit-iOS Tests" */;
+			buildConfigurationList = 996F54441D0FF237000F2DBB /* Build configuration list for PBXNativeTarget "ActivityKit Tests" */;
 			buildPhases = (
 				996F54331D0FF237000F2DBB /* Sources */,
 				996F54341D0FF237000F2DBB /* Frameworks */,
@@ -201,9 +186,9 @@
 			dependencies = (
 				996F543A1D0FF237000F2DBB /* PBXTargetDependency */,
 			);
-			name = "ActivityKit-iOS Tests";
+			name = "ActivityKit Tests";
 			productName = ActivityKitTests;
-			productReference = 996F54371D0FF237000F2DBB /* ActivityKit-iOS Tests.xctest */;
+			productReference = 996F54371D0FF237000F2DBB /* ActivityKit Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -213,7 +198,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Chrisna;
 				TargetAttributes = {
 					996F542C1D0FF237000F2DBB = {
@@ -242,8 +227,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				996F542C1D0FF237000F2DBB /* ActivityKit-iOS */,
-				996F54361D0FF237000F2DBB /* ActivityKit-iOS Tests */,
+				996F542C1D0FF237000F2DBB /* ActivityKit */,
+				996F54361D0FF237000F2DBB /* ActivityKit Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -277,7 +262,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"[warning] cannot run swiftlint because it isn't installed\"\nfi\n";
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: Cannot run SwiftLint because it isn't installed.\"\nfi\n";
 		};
 		996F54571D0FF46D000F2DBB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -291,6 +276,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# If we're using the Debug build configuration, suffix the build number with\n# the current branch name to make collisions far less likely across feature\n# branches.\n\nbuild_number=$(git rev-list HEAD --count)\n\nif [ \"$CONFIGURATION\" = \"Debug\" ]; then\n    branch_name=$(git rev-parse --abbrev-ref HEAD)\n    /usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $build_number-$branch_name\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n    /usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $build_number-$branch_name\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}.dSYM/Contents/Info.plist\"\nelse\n    /usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $build_number\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n    /usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $build_number\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}.dSYM/Contents/Info.plist\"\nfi\n";
+		};
+		999CA7F91E9B3EFA00DEF5A8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftformat >/dev/null; then\n    swiftformat --commas inline \"${SRCROOT}/Sources\"\n    swiftformat --commas inline \"${SRCROOT}/Tests\"\nelse\n    echo \"warning: Cannot run SwiftFormat because it isn't installed.\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -310,7 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				996F54551D0FF416000F2DBB /* ActivityKitTests.swift in Sources */,
+				999CA7F61E9B3E0000DEF5A8 /* ActivityKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +317,7 @@
 /* Begin PBXTargetDependency section */
 		996F543A1D0FF237000F2DBB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 996F542C1D0FF237000F2DBB /* ActivityKit-iOS */;
+			target = 996F542C1D0FF237000F2DBB /* ActivityKit */;
 			targetProxy = 996F54391D0FF237000F2DBB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -340,8 +338,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -393,8 +393,10 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -427,11 +429,12 @@
 		996F54421D0FF237000F2DBB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "ActivityKit-iOS/Info.plist";
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.chrisna.ActivityKit;
@@ -444,11 +447,12 @@
 		996F54431D0FF237000F2DBB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "ActivityKit-iOS/Info.plist";
+				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.chrisna.ActivityKit;
@@ -461,7 +465,7 @@
 		996F54451D0FF237000F2DBB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = "ActivityKit-iOSTests/Info.plist";
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.chrisna.ActivityKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -472,7 +476,7 @@
 		996F54461D0FF237000F2DBB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = "ActivityKit-iOSTests/Info.plist";
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.chrisna.ActivityKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -492,7 +496,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		996F54411D0FF237000F2DBB /* Build configuration list for PBXNativeTarget "ActivityKit-iOS" */ = {
+		996F54411D0FF237000F2DBB /* Build configuration list for PBXNativeTarget "ActivityKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				996F54421D0FF237000F2DBB /* Debug */,
@@ -501,7 +505,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		996F54441D0FF237000F2DBB /* Build configuration list for PBXNativeTarget "ActivityKit-iOS Tests" */ = {
+		996F54441D0FF237000F2DBB /* Build configuration list for PBXNativeTarget "ActivityKit Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				996F54451D0FF237000F2DBB /* Debug */,

@@ -9,7 +9,6 @@
 import UIKit
 
 extension UIActivity {
-
     @objc(cka_lengthInPointsOfActivityImageFor:)
     func lengthInPointsOfActivityImageFor(traitCollection: UITraitCollection) -> CGFloat {
         switch traitCollection.userInterfaceIdiom {
@@ -24,5 +23,4 @@ extension UIActivity {
             return 50.0
         }
     }
-
 }

@@ -29,7 +29,7 @@ public final class OpenInSafariActivity: UIActivity {
         return UIImage.openInSafariActivityImage(sideLength: sideLength, scale: screenScale)
     }
 
-    override public func canPerform(withActivityItems activityItems: [Any]) -> Bool {
+    public override func canPerform(withActivityItems activityItems: [Any]) -> Bool {
         for item in activityItems {
             if (item as? URL) != nil {
                 return true
@@ -40,7 +40,7 @@ public final class OpenInSafariActivity: UIActivity {
         return false
     }
 
-    override public func prepare(withActivityItems activityItems: [Any]) {
+    public override func prepare(withActivityItems activityItems: [Any]) {
         for item in activityItems {
             if let itemURL = item as? URL {
                 url = itemURL
@@ -50,7 +50,7 @@ public final class OpenInSafariActivity: UIActivity {
         }
     }
 
-    override public func perform() {
+    public override func perform() {
         guard let url = url else {
             activityDidFinish(false)
             return
@@ -65,5 +65,4 @@ public final class OpenInSafariActivity: UIActivity {
             activityDidFinish(didOpenURL)
         }
     }
-
 }
